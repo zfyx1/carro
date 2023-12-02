@@ -16,8 +16,7 @@ void OTATask(void *params)
   WiFi.begin(ssid, password);
   wifiMulti.addAP(ssid, password);
   wifiMulti.addAP("telefono", "17122009");
-
-  //wifiMulti.addAP("tucasa", "el de tu casa");
+  wifiMulti.addAP("Omni_lite70C2D8", "upper8224");
 
   while (wifiMulti.run() != WL_CONNECTED)
   {
