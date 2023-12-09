@@ -7,5 +7,6 @@ void getFiltered(AsyncWebServerRequest *request);
 void getById(AsyncWebServerRequest *request);
 void getRequest(AsyncWebServerRequest *request);
 void apiSetVelocidad(AsyncWebServerRequest *request);
+void apiSetRotacion(AsyncWebServerRequest *request);
 
 #endif

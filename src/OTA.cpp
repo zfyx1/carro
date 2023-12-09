@@ -7,7 +7,8 @@
 WiFiMulti wifiMulti;
 const char *ssid = "Sayab";
 const char *password = "PlanetarioSaYaB";
-bool isConnected() {
+bool isConnected()
+{
   return WiFi.isConnected();
 }
 void OTATask(void *params)
@@ -15,6 +16,7 @@ void OTATask(void *params)
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   wifiMulti.addAP(ssid, password);
+  wifiMulti.addAP("MiniMakers", "Sayaab01");
   wifiMulti.addAP("telefono", "17122009");
   wifiMulti.addAP("Omni_lite70C2D8", "upper8224");
 

@@ -26,6 +26,8 @@ void InitServer()
     Serial.println("Escuchando comandos");
     server.on("/", HTTP_GET, homeRequest);
     server.on("/velocidad", HTTP_GET, apiSetVelocidad);
+        server.on("/rotacion", HTTP_GET, apiSetRotacion);
+
 
     server.on("/item", HTTP_GET, getRequest);
     server.on(
