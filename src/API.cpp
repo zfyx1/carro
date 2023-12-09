@@ -67,6 +67,30 @@ void apiSetVelocidad(AsyncWebServerRequest *request)
   request->send(200, "text/plain", message);
 }
 
+void apiSetRotacion(AsyncWebServerRequest *request)
+{
+  int id = GetIdFromURL(request, "/rotacion/");
+
+  String message = String("Set Rotacion ") + id;
+  if (id > 0)
+  {
+    setRotacion(1);
+    setVelocidadRotacion(id);
+  }
+  else if (id < 0)
+  {
+    setRotacion(-1);
+    setVelocidadRotacion(id * -1);
+  }
+  else
+  {
+    setRotacion(0);
+    setVelocidadRotacion(0);
+  }
+
+  Serial.println(message);
+  request->send(200, "text/plain", message);
+}
 void getRequest(AsyncWebServerRequest *request)
 {
 

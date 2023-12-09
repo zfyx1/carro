@@ -15,7 +15,14 @@ void setDireccion(int d)
 {
   direccion = d;
 }
-
+void setRotacion(int r)
+{
+  rotacion = r;
+}
+void setVelocidadRotacion(int r)
+{
+  velocidadRotacion = r;
+}
 void motoresTask(void *params)
 {
   while (true)
